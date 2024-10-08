@@ -79,8 +79,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
 
         return res.status(200).json(updatedUser);
-    } catch (error: any) {
-        console.error("API error:", error.message);
-        return res.status(400).json({ message: error.message });
+    } catch (error) {
+        console.error(error);
+        return res.status(400).json(error);
     }
 }

@@ -183,8 +183,8 @@ const EditModal = () => {
             mutateFetchedUser();
             toast.success('Profile updated successfully');
             editModal.onClose();
-        } catch (error: any) {
-            console.error('Error:', error.response?.data || error.message);
+        } catch (error) {
+            console.error(error);
             toast.error('Something went wrong');
         } finally {
             setIsLoading(false);
