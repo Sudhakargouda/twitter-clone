@@ -158,14 +158,23 @@ interface User {
     username: string;
 }
 
+// Define an interface for a comment
+interface Comment {
+    id: string | number;
+    body: string;
+    userId: string | number;
+    postId: string | number;
+    createdAt: string;
+}
+
 // Define an interface for the post
 interface Post {
-    id: string | number;  // Assuming post ID can be either string or number
-    body: string;         // Content of the post
-    user: User;          // User object associated with the post
-    createdAt: string;    // Date the post was created
-    comments?: Record<string, any>[]; // Array of comments, adjust type as needed
-    likedIds: (string | number)[];    // Array of user IDs who liked the post
+    id: string | number;        // Assuming post ID can be either string or number
+    body: string;               // Content of the post
+    user: User;                 // User object associated with the post
+    createdAt: string;          // Date the post was created
+    comments?: Comment[];       // Array of comments
+    likedIds: (string | number)[]; // Array of user IDs who liked the post
 }
 
 interface PostItemProps {
