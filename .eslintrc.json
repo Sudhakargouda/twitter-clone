@@ -1,3 +1,12 @@
+// {
+//   "extends": ["next/core-web-vitals", "next/typescript"]
+// }
+
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-console": "off", // Disables no-console rule globally
+    "react/prop-types": "off", // Disables prop-types check if you're using TypeScript
+    "no-unused-vars": "warn" // Change severity of unused variables to warning
+  }
 }
